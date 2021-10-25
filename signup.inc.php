@@ -10,6 +10,7 @@ if (isset($_POST['register-submit'])) {
     $customerContact = $_POST['customerNumber'];
     $_SESSION['tac'] = rand(100000,999999);
     $tac = $_SESSION['tac'];
+    print_r($tac);
     print_r($conn);
     
 
@@ -42,7 +43,7 @@ if (isset($_POST['register-submit'])) {
 
             $sql = "INSERT INTO tac (tac_tac) VALUES ('$tac');";
             mysqli_query($conn,$sql);
-            print_r($sql);
+            print_r('hello');
         
             header('Location: tac.php?signup=success');
         }
