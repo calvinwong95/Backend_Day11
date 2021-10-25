@@ -1,6 +1,7 @@
 <?php 
 session_start();
 error_reporting(E_ALL);
+
 echo 'hello'.'<br>';
 if (isset($_POST['register-submit'])) {
 
