@@ -1,8 +1,11 @@
 <?php 
 session_start();
+error_reporting(E_ALL);
+echo 'hello'.'<br>';
 if (isset($_POST['register-submit'])) {
 
     require 'db.sql.php';
+    echo 'hello from isset register submit';
 
     //need variables to retreieve from sign up
 
@@ -46,6 +49,8 @@ if (isset($_POST['register-submit'])) {
             print_r('hello');
         
             header('Location: tac.php?signup=success');
+
+            
         }
 
 
